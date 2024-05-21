@@ -7,11 +7,12 @@ We go through creating 2 different kinds of NFTs.
 
 <br/>
 <p align="center">
-<img src="./images/hadesNft/hades.jpeg" width="225" alt="NFT Pug">
+<img src="./images/hadesNft/hades.jpeg" width="225" alt="hades NFT">
+<img src="./images/hadesNft/ares.jpeg" width="225" alt="ares NFT">
+<img src="./images/hadesNft/cain.jpeg" width="225" alt="cain NFT">
 <img src="./images/dynamicNft/happy.svg" width="225" alt="NFT Happy">
-<img src="./images/hadesNft/cain.jpeg" width="225" alt="NFT Shiba">
 <img src="./images/dynamicNft/sad.svg" width="225" alt="NFT Frown">
-<img src="./images/hadesNft/ares.jpeg" width="225" alt="NFT St.Bernard">
+
 </p>
 <br/>
 
