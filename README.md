@@ -2,9 +2,9 @@
 
 <br/>
 <p align="center">
-<img src="./images/hadesNft/hades.jpeg" width="225" alt="hades NFT">
-<img src="./images/hadesNft/ares.jpeg" width="225" alt="ares NFT">
-<img src="./images/hadesNft/cain.jpeg" width="225" alt="cain NFT">
+<img src="./images/hades.jpeg" width="225" alt="hades NFT">
+<img src="./images/ares.jpeg" width="225" alt="ares NFT">
+<img src="./images/cain.jpeg" width="225" alt="cain NFT">
 </p>
 <br/>
 
