@@ -1,0 +1,11 @@
+{
+    "name": "HADES",
+    "description": "An evil promethiean being",
+    "image": "https://ipfs.io/ipfs/QmSpyfocm5mQ7DrokX5696qH3DzCv5FKa7Wwt4Lnv5ApwL?filename=hades.jpeg",
+    "attributes": [
+        {
+            "trait_type": "despair",
+            "value": 999
+        }
+    ]
+}

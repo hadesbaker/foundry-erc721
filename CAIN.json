@@ -1,0 +1,11 @@
+{
+    "name": "CAIN",
+    "description": "An evil promethiean being",
+    "image": "https://ipfs.io/ipfs/QmbChNHaMcvujpbSqXmJxSh4Bd81iiT9WvvDKBWTb9SrAs?filename=cain.jpeg",
+    "attributes": [
+        {
+            "trait_type": "despair",
+            "value": 888
+        }
+    ]
+}

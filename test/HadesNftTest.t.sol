@@ -9,15 +9,33 @@ contract HadesNftTest is Test {
     DeployHadesNft public deployer;
     HadesNft public hadesNft;
 
+    address public USER = makeAddr("user");
+    string public constant HADES =
+        "https://ipfs.io/ipfs/QmZBtZ1Hv4ZCPGmtYb9G3JNHMKUrVPe72FmZeAxaBfLXwH?filename=HADES.json";
+
     function setUp() public {
         deployer = new DeployHadesNft();
         hadesNft = deployer.run();
     }
 
-    function testNameIsCorrect() public view {
+    function testNameIsCorrect() public {
         string memory expectedName = "Hades";
         string memory actualName = hadesNft.name();
 
-        assertEq(keccak256(bytes(expectedName)), keccak256(bytes(actualName)));
+        assertEq(
+            keccak256(abi.encodePacked(expectedName)),
+            keccak256(abi.encodePacked(actualName))
+        );
+    }
+
+    function testCanMintAndHaveABalance() public {
+        vm.prank(USER);
+        hadesNft.mintNft(HADES);
+
+        assert(hadesNft.balanceOf(USER) == 1);
+        assertEq(
+            keccak256(abi.encodePacked(HADES)),
+            keccak256(abi.encodePacked(hadesNft.tokenURI(0)))
+        );
     }
 }
