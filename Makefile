@@ -2,7 +2,7 @@
 
 .PHONY: all test clean deploy fund help install snapshot format anvil 
 
-DEFAULT_ANVIL_KEY := 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+DEFAULT_ANVIL_KEY := 0xdbda1821b80551c9d65939329250298aa3472ba22feea921c0cf5d620ea67b97
 
 help:
 	@echo "Usage:"
@@ -36,21 +36,30 @@ anvil :; anvil -m 'test test test test test test test test test test test junk' 
 NETWORK_ARGS := --rpc-url http://localhost:8545 --private-key $(DEFAULT_ANVIL_KEY) --broadcast
 
 ifeq ($(findstring --network sepolia,$(ARGS)),--network sepolia)
-	NETWORK_ARGS := --rpc-url $(SEPOLIA_RPC_URL) --private-key $(HADES_PRIVATE_KEY) --broadcast --verify --legacy --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
+	NETWORK_ARGS := --rpc-url $(SEPOLIA_RPC_URL) --private-key $(ACHILLES_PRIVATE_KEY) --broadcast --legacy --verify --etherscan-api-key $(ETHERSCAN_API_KEY) -vvvv
 endif
 
-deploy:
+# HADES
+deployHades:
 	@forge script script/DeployHadesNft.s.sol:DeployHadesNft $(NETWORK_ARGS)
 
-mint:
+mintHades:
 	@forge script script/Interactions.s.sol:MintHadesNft ${NETWORK_ARGS}
 
-deployMood:
-	@forge script script/DeployMoodNft.s.sol:DeployMoodNft $(NETWORK_ARGS)
+# CAIN
+deployCain:
+	@forge script script/DeployCainNft.s.sol:DeployCainNft $(NETWORK_ARGS)
 
-mintMoodNft:
-	@forge script script/Interactions.s.sol:MintMoodNft $(NETWORK_ARGS)
+mintCain:
+	@forge script script/Interactions.s.sol:MintCainNft ${NETWORK_ARGS}
 
-flipMoodNft:
-	@forge script script/Interactions.s.sol:FlipMoodNft $(NETWORK_ARGS)
+# ARES
+deployAres:
+	@forge script script/DeployAresNft.s.sol:DeployAresNft $(NETWORK_ARGS)
+
+mintAres:
+	@forge script script/Interactions.s.sol:MintAresNft ${NETWORK_ARGS}
+
+
+
 

@@ -1,7 +1,7 @@
 {
     "name": "ARES",
     "description": "An evil promethiean being",
-    "image": "https://ipfs.io/ipfs/QmcKYGSEo6djbyRNf74wDMXttC1idGsuJJFqP9QsWK1Dkn?filename=ares.jpeg",
+    "image": "ipfs://QmcKYGSEo6djbyRNf74wDMXttC1idGsuJJFqP9QsWK1Dkn",
     "attributes": [
         {
             "trait_type": "despair",

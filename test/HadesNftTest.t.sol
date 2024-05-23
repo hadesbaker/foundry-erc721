@@ -10,7 +10,7 @@ contract HadesNftTest is Test {
     HadesNft public hadesNft;
 
     address public USER = makeAddr("user");
-    string public constant HADES =
+    string public constant HADES_URI =
         "https://ipfs.io/ipfs/QmZBtZ1Hv4ZCPGmtYb9G3JNHMKUrVPe72FmZeAxaBfLXwH?filename=HADES.json";
 
     function setUp() public {
@@ -30,11 +30,11 @@ contract HadesNftTest is Test {
 
     function testCanMintAndHaveABalance() public {
         vm.prank(USER);
-        hadesNft.mintNft(HADES);
+        hadesNft.mintNft(HADES_URI);
 
         assert(hadesNft.balanceOf(USER) == 1);
         assertEq(
-            keccak256(abi.encodePacked(HADES)),
+            keccak256(abi.encodePacked(HADES_URI)),
             keccak256(abi.encodePacked(hadesNft.tokenURI(0)))
         );
     }

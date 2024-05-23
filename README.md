@@ -1,22 +1,14 @@
-# Foundry NFT
-
-We go through creating 2 different kinds of NFTs.
-
-1. An IPFS Hosted NFT 
-2. An SVG NFT (Hosted 100% on-chain) 
+# Foundry erc721
 
 <br/>
 <p align="center">
 <img src="./images/hadesNft/hades.jpeg" width="225" alt="hades NFT">
 <img src="./images/hadesNft/ares.jpeg" width="225" alt="ares NFT">
 <img src="./images/hadesNft/cain.jpeg" width="225" alt="cain NFT">
-<img src="./images/dynamicNft/happy.svg" width="225" alt="NFT Happy">
-<img src="./images/dynamicNft/sad.svg" width="225" alt="NFT Frown">
-
 </p>
 <br/>
 
-- [Foundry NFT](#foundry-nft)
+- [Foundry erc721](#foundry-erc721)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
@@ -28,7 +20,6 @@ We go through creating 2 different kinds of NFTs.
     - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Scripts](#scripts)
-  - [Base64](#base64)
   - [Estimate gas](#estimate-gas)
 - [Formatting](#formatting)
 
@@ -112,42 +103,13 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 make deploy ARGS="--network sepolia"
 ```
 
-3. Deploy (SVG NFT)
-
-```
-make deploySvg ARGS="--network sepolia"
-```
-
 ## Scripts
 
 After deploy to a testnet or local net, you can run the scripts. 
 
-Using cast deployed locally example: 
-
 ```
-cast send <RAFFLE_CONTRACT_ADDRESS> "enterRaffle()" --value 0.1ether --private-key <PRIVATE_KEY> --rpc-url $SEPOLIA_RPC_URL
+make mint ARGS="--network sepolia"
 ```
-
-or, to create a ChainlinkVRF Subscription:
-
-```
-make createSubscription ARGS="--network sepolia"
-```
-
-## Base64
-
-To get the base64 of an image, you can use the following command:
-
-```
-echo "data:image/svg+xml;base64,$(base64 -i ./images/dynamicNft/happy.svg)"
-```
-
-Then, you can get the base64 encoding of the json object by placing the imageURI into `happy_image_uri.json` then running:
-
-```
-echo "data:application/json;base64,$(base64 -i ./images/dynamicNft/happy_image_uri.json)"
-```
-
 
 ## Estimate gas
 
