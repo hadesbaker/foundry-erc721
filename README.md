@@ -97,10 +97,10 @@ Optionally, add your `ETHERSCAN_API_KEY` if you want to verify your contract on 
 
 Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesnet ETH. You should see the ETH show up in your metamask.
 
-2. Deploy (IPFS NFT)
+2. Deploy
 
 ```
-make deploy ARGS="--network sepolia"
+make deployHades ARGS="--network sepolia"
 ```
 
 ## Scripts
@@ -108,7 +108,7 @@ make deploy ARGS="--network sepolia"
 After deploy to a testnet or local net, you can run the scripts. 
 
 ```
-make mint ARGS="--network sepolia"
+make mintHades ARGS="--network sepolia"
 ```
 
 ## Estimate gas
