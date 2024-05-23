@@ -18,7 +18,7 @@ contract HadesNftTest is Test {
         hadesNft = deployer.run();
     }
 
-    function testNameIsCorrect() public {
+    function testNameIsCorrect() public view {
         string memory expectedName = "Hades";
         string memory actualName = hadesNft.name();
 
