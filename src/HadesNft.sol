@@ -3,11 +3,11 @@ pragma solidity ^0.8.18;
 
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-/*
+/**
  * @title A ERC721 NFT
  * @author Taki Baker Alyasri
  * @notice This contract creates a basic OpenZeppelin ERC721 token
- * @dev This NFT can be minted via the Interactions.s.sol script
+ * @dev This NFT can be deployed via the DeployHadesNft.s.sol script and minted via the Interactions.s.sol script
  */
 contract HadesNft is ERC721 {
     /// STORAGE VARIABLES ///

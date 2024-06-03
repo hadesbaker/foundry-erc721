@@ -1,5 +1,12 @@
 # Foundry erc721
 
+by Taki Baker Alyasri
+
+- GitHub: [hadesbaker](https://www.github.com/hadesbaker)
+- Twitter: [hadesbaker](https://www.twitter.com/hadesbaker)
+- LinkedIn: [Taki Baker](https://www.linkedin.com/in/taki-baker-4a60851a5/)
+- Portfolio: [takibaker.netlify.app](https://takibaker.netlify.app)
+  
 <br/>
 <p align="center">
 <img src="./images/hades.jpeg" width="225" alt="hades NFT">
@@ -8,7 +15,9 @@
 </p>
 <br/>
 
+# Table of Contents
 - [Foundry erc721](#foundry-erc721)
+- [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
@@ -36,7 +45,7 @@
 ## Quickstart
 
 ```
-git clone https://github.com/hadesbaker/foundry-erc721
+git clone https://github.com/hadesbaker/foundry-erc721.git
 cd foundry-erc721
 make install
 forge build
